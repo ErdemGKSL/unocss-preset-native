@@ -21,7 +21,7 @@ templates.push(
         `width-${end}%`,
       ]
     } else {
-      const size = str.match(/\d+/)?.[0];
+      const size = str.match(/\d+/)?.[0] || "1";
       return [
         `width-${size}px`,
         `width-${size}vw`,
