@@ -35,5 +35,5 @@ rules.push([
 ]);
 
 templates.push(
-  `display-(${displayTypes.join('|')})`
+  `(${displayTypes.map(s => `display-${s}`).join("|")})`,
 )

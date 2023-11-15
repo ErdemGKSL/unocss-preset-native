@@ -9,6 +9,7 @@ rules.push([
 ]);
 
 templates.push(
+  'width-',
   (str) => {
     if (!str.startsWith('width-')) return [];
     const end = str.slice(4);
@@ -29,6 +30,7 @@ templates.push(
       ].filter(s => s.startsWith(str))
     }
   },
+  'height-',
   (str) => {
     if (!str.startsWith('height-')) return [];
     const end = str.slice(4);
@@ -40,7 +42,7 @@ templates.push(
         `height-${end}%`,
       ]
     } else {
-      const size = str.match(/\d+/)?.[0];
+      const size = str.match(/\d+/)?.[0] || "1";
       return [
         `height-${size}px`,
         `height-${size}vw`,

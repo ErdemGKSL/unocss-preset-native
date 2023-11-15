@@ -1,6 +1,6 @@
 {
   "name": "unocss-preset-native",
-  "version": "0.0.0-dev.0",
+  "version": "0.0.0-dev.1",
   "description": "native css like preset for unocss",
   "main": "dist/index.js",
   "scripts": {

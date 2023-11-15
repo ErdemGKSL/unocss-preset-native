@@ -9,7 +9,8 @@ rules.push([
 ]);
 
 templates.push(
-  async (str) => {
+  'gap-',
+  (str) => {
     if (!str.startsWith('gap-')) return [];
     const end = str.slice(4);
     if (/^\d+$/.test(end)) {
@@ -20,7 +21,7 @@ templates.push(
         `gap-${end}%`,
       ]
     } else {
-      const size = str.match(/\d+/)?.[0];
+      const size = str.match(/\d+/)?.[0] || "1";
       return [
         `gap-${size}px`,
         `gap-${size}vw`,

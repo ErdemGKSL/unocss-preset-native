@@ -32,6 +32,6 @@ rules.push(
 );
 
 templates.push(
-  `flex-direction-(${flexDirections.join("|")})`,
-  `flex-wrap-(${flexWraps.join("|")})`
+  `(${flexDirections.map(s => `flex-direction-${s}`).join("|")})`,
+  `(${flexWraps.map(s => `flex-wrap-${s}`).join("|")})`,
 )
